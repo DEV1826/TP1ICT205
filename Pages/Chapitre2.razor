@@ -1,0 +1,82 @@
+﻿@page "/chapitre2"
+
+<PageTitle>CHAPITRE 2</PageTitle>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 2 - Application Console</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CHAPITRE 2 : APPLICATION CONSOLE</h1>
+
+    <h2>1. Crée un projet “Console App”</h2>
+    <p>Pour créer un projet d'application console dans Visual Studio, suivez ces étapes :</p>
+    <ol>
+        <li>Ouvrez Visual Studio.</li>
+        <li>Dans l'écran d'accueil, cliquez sur "Créer un nouveau projet".</li>
+        <li>Dans la liste des modèles de projet, recherchez "Application Console".</li>
+        <li>Sélectionnez "Application Console (.NET Core)" ou "Application Console (.NET Framework)" selon vos besoins.</li>
+        <li>Cliquez sur "Suivant", puis nommez votre projet et choisissez un emplacement.</li>
+        <li>Cliquez sur "Créer" pour générer le projet.</li>
+    </ol>
+
+    <h2>2. Analyser l’environnement de développement et du code généré</h2>
+    <p>Une fois le projet créé, Visual Studio ouvre l'IDE avec plusieurs éléments :</p>
+    <ul>
+        <li><strong>Solution Explorer</strong> : Affiche la structure de votre projet, y compris les fichiers source.</li>
+        <li><strong>Éditeur de code</strong> : Où vous écrivez votre code. Le fichier principal est généralement <code>Program.cs</code>.</li>
+        <li><strong>Console</strong> : L'interface utilisateur pour exécuter votre application et afficher les résultats.</li>
+    </ul>
+    <p>Le code généré contient un squelette de programme avec une méthode <code>Main</code> qui est le point d'entrée de l'application.</p>
+
+    <h2>3. Écrire du texte dans votre application</h2>
+    <p>Pour écrire du texte dans votre application console, modifiez la méthode <code>Main</code> comme suit :</p>
+<pre><code>using System;
+
+namespace MonApplicationConsole
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Bonjour, bienvenue dans votre application console !");
+        }
+    }
+}</code></pre>
+    <p>Cette ligne de code utilise la méthode <code>Console.WriteLine</code> pour afficher un message dans la console.</p>
+
+    <h2>4. Exécution du projet</h2>
+    <p>Pour exécuter votre projet :</p>
+    <ol>
+        <li>Appuyez sur <strong>F5</strong> ou cliquez sur le bouton "Démarrer" dans Visual Studio.</li>
+        <li>La console s'ouvrira et affichera le message que vous avez codé.</li>
+        <li>Pour fermer la console, vous pouvez appuyer sur une touche ou cliquer sur la fenêtre.</li>
+    </ol>
+
+</body>
+</html>
+
+@code {
+
+}

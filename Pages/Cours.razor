@@ -1,0 +1,151 @@
+﻿@page "/cours"
+
+<PageTitle>CHAPITRE 1</PageTitle>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 1 - Qu'est-ce que .NET ?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CHAPITRE 1</h1>
+
+    <h2>Qu’est-ce que .NET ?</h2>
+    <p>D’après Microsoft, le Framework .NET est une nouvelle plateforme informatique qui simplifie le développement d’application dans l’environnement fortement distribué d’internet.</p>
+    <p>Les principaux objectifs :</p>
+    <ul>
+        <li>Fournir un environnement cohérent de programmation orientée objet. Que le code soit stocké et exécuté localement, mais distribué sur internet ou exécuté à distance.</li>
+        <li>Fournir un environnement qui garantit l’exécution sécurisée du code.</li>
+        <li>Fournir au programmeur un environnement cohérent qui lui permet de développer une grande variété de types d’application (comme les applications Windows, les services Windows, les applications embarquées, les applications web…)</li>
+        <li>Générer toute la communication à partir des normes d’industrie pour s’assurer que le code basé sur le Framework .NET peut s’intégrer à n’importe quel autre code.</li>
+    </ul>
+
+    <h3>1. Découvrir l’historique de .NET</h3>
+    <p>Microsoft a lancé le Framework .NET en 2002 en tant que Framework révolutionnaire pour la création d’applications Windows. Il comporte 2 parties principales :</p>
+    <ul>
+        <li><strong>Common Language Runtime (CLR)</strong> : Il gère l’exécution du code écrit dans différents langages .NET tels que (C#, VB.NET, F#, Iron Python, Iron Ruby). Il fournit des services tels que la gestion de la mémoire, la sécurité des types, la gestion des exceptions, et la gestion des threads.</li>
+        <li><strong>Framework Class Library (FCL)</strong> : Il s’agit d’une collection complète de classes, d’interfaces et de types de valeur réutilisables que vous utilisez pour créer vos applications. Il offre un large éventail de fonctionnalités telles que (l’accès aux données, les entrées/sorties des données, la gestion des fichiers et la sécurité).</li>
+    </ul>
+    <p>La dernière version de .NET Framework est la version 4.8.1 publiée en Août 2022, la dernière version majeure date d'Avril 2019.</p>
+
+    <h3>Tableau récapitulatif des versions de .NET et VS CODE</h3>
+    <table border="1">
+        <tr>
+            <th>.NET Framework version</th>
+            <th>Année</th>
+            <th>VS version</th>
+        </tr>
+        <tr><td>4.8.1</td><td>Août 2022</td><td></td></tr>
+        <tr><td>4.8</td><td>18-04-2019</td><td></td></tr>
+        <tr><td>4.7.2</td><td>30-04-2018</td><td></td></tr>
+        <tr><td>4.7.1</td><td>17-10-2017</td><td></td></tr>
+        <tr><td>4.7</td><td>11-04-2017</td><td></td></tr>
+        <tr><td>4.6.2</td><td>02-08-2016</td><td></td></tr>
+        <tr><td>4.6.1</td><td>30-11-2015</td><td></td></tr>
+        <tr><td>4.6</td><td>29-07-2015</td><td></td></tr>
+        <tr><td>4.5.2</td><td>05-05-2014</td><td></td></tr>
+        <tr><td>4.5.1</td><td>15-01-2012</td><td></td></tr>
+        <tr><td>4.5</td><td>09-10-2012</td><td></td></tr>
+        <tr><td>4</td><td>12-04-2010</td><td></td></tr>
+        <tr><td>3.5</td><td>10-12-2007</td><td></td></tr>
+        <tr><td>3</td><td>21-11-2006</td><td></td></tr>
+        <tr><td>2</td><td>12-02-2006</td><td></td></tr>
+        <tr><td>1.1</td><td>10-07-2003</td><td></td></tr>
+        <tr><td>1.0</td><td>15-04-2002</td><td></td></tr>
+    </table>
+
+    <p>Dans le début des années 2000, .NET Framework vient unifier la manière de développer les applications sur Windows. Avec sa première version en 2002, il apporte la possibilité de développer des applications web avec ASP.NET. On va avoir des web services en 2005, des applications bureau en 2006, le patron MVC pour le développement d’applications web en 2009, les API web en 2013.</p>
+    <p>Le problème rencontré jusqu’ici est que le Framework .NET est très lié à Windows et très lourd et est pratiquement impossible à faire évoluer en profondeur, dans un monde où on héberge les applications dans les conteneurs. Microsoft devait réagir, et c’est ce qu’ils ont fait en 2016 en annonçant l’arrivée d’un nouveau Framework plus léger, multiplateforme et moderne qui répond aux normes de .NETCORE.</p>
+    <p>Au début des années 2016, c’était assez difficile à utiliser et avec le rythme de livraison plus soutenu, l’arrivée de .NETCORE 3.1 va venir répondre à la majorité des problèmes. Un nouveau problème va se poser car on a 2 versions de Framework qui cohabitent et évoluent séparément. En 2019, Microsoft annonce que .NETCORE est suffisamment mature et complet et qu’en 2020, on ne parlera plus de .NETCORE ou .NET FRAMEWORK mais plutôt de .NET. Il y aura désormais une version par an, à commencer par .NET 5.</p>
+
+    <h3>2. Utiliser .NET pour différents types de projet</h3>
+    <p>Si on regarde la vue d’ensemble de .NET aujourd’hui, il est possible de faire :</p>
+    <ul>
+        <li>
+            Du développement bureau :
+            <ul>
+                <li>.NET MAUI</li>
+                <li>BLAZOR</li>
+            </ul>
+        </li>
+        <li>
+            Du développement web :
+            <ul>
+                <li>ASP.NET</li>
+                <li>BLAZOR</li>
+            </ul>
+        </li>
+        <li>
+            Du développement mobile :
+            <ul>
+                <li>.NET MAUI</li>
+                <li>XAMARIM</li>
+            </ul>
+        </li>
+        <li>
+            Du développement cloud :
+            <ul>
+                <li>AZURE</li>
+            </ul>
+        </li>
+        <li>
+            De l’IOT des architectures
+            <ul>
+                <li>ARM32</li>
+                <li>ARM64</li>
+            </ul>
+        </li>
+        <li>
+            De l’intelligence Artificielle :
+            <ul>
+                <li>ML.NET</li>
+                <li>.NET FOR APACHE SPARK</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>3. Quels sont les langages disponibles</h3>
+    <p>Il existe 3 langages autour de .NET pour le développement des projets :</p>
+    <ul>
+        <li><strong>C#</strong> : Pour tous les usages, il est issu du C, le rendant plus abordable.</li>
+        <li><strong>VB.NET</strong> : Pour les anciens qui faisaient du VB ou VBA.</li>
+        <li><strong>F#</strong> : Pour ceux qui veulent faire du Machine Learning ou pour ceux qui veulent de la manipulation de données.</li>
+    </ul>
+    <p>Vous avez des fichiers .CS pour C#, .VB pour VB.NET et .FS pour F#. Ces fichiers sont précompilés à l’aide de chaque compilateur du langage en langage intermédiaire appelé MSIL (Microsoft Intermediate Language / Common Intermediate Language) et qui sont au format .EXE ou .DLL. L’ensemble va être chargé dans le CLR (Common Language Runtime) et c’est lui qui va exécuter un processus appelé compilation JIT (Just In Time), c’est à ce moment que le langage intermédiaire est transformé en code machine pour qu’il puisse être interprété par la machine qui l’héberge.</p>
+
+    <h3>4. Présentation de Visual Studio</h3>
+    <h4>1) Comment télécharger VS</h4>
+    <p>Pour télécharger VS, il suffit de saisir le mot clé <strong>installer Visual Studio Community 2022</strong> dans un moteur de recherche et de cliquer ensuite sur le lien de téléchargement proposé : <a href="https://visualstudio.microsoft.com/fr/vs/community/">https://visualstudio.microsoft.com/fr/vs/community/</a>, puis cliquer sur le bouton télécharger.</p>
+
+    <h4>2) Comment installer</h4>
+    <p>Pour installer Visual Studio Community 2022, il suffit de double cliquer sur le setup précédemment téléchargé, une fenêtre appelée Visual Studio Community Installer va s’afficher. Dans cette fenêtre, nous allons sélectionner les composants suivants : Développement web et ASP.NET, développement .NET multiplateforme MAUI, développement .NET desktop.</p>
+
+    <h4>3) Présentation</h4>
+    <p>Au démarrage de VS, on voit un splash screen (écran fugitif ou fenêtre d’attente). C’est là la toute première fenêtre affichée par un logiciel faisant généralement office d’écran de chargement. Elle insiste l’utilisateur à patienter pendant le chargement et l’installation des composants du logiciel tout en lui apportant diverses informations comme le nom de l’éditeur, le logo, les droits d’auteur associés au logiciel, la version et l’état du chargement du logiciel. Après cette fenêtre, va apparaître une deuxième fenêtre dite fenêtre de base de VS.</p>
+
+</body>
+</html>
+
+@code {
+
+}
